@@ -5,43 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
   <link rel="stylesheet" href="kim.css">
-
-  <script src="kim.css" defer></script>
 </head>
 <body>
 
-<div class="container">
-  <form class="card" id="registerForm">
-    <h2>Create Account</h2>
-
-    <div class="input-group">
-      <label>Full Name</label>
-      <input type="text" id="regName" required>
+<div class="split-container">
+  <!-- Left side with image and testimonial -->
+  <div class="left-side">
+    <div class="overlay">
+      <p class="testimonial">
+        “I chose to work for CrowdGen by Appen because I enjoy remote work and I get to learn more about artificial intelligence. I can basically work whenever and I've always got an eye out for when new projects come up.”
+      </p>
+      <span class="author">~ Paul, USA</span>
     </div>
+  </div>
 
-    <div class="input-group">
-      <label>Email</label>
-      <input type="email" id="regEmail" required>
-    </div>
+  <!-- Right side with register form -->
+  <div class="right-side">
+    <form class="card" id="registerForm">
+      <h2>Create Account</h2>
 
-    <div class="input-group">
-      <label>Password</label>
-      <input type="password" id="regPassword" required>
-    </div>
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter Full Name" required>
+      </div>
 
-    <div class="input-group">
-      <label>Confirm Password</label>
-      <input type="password" id="regConfirmPassword" required>
-    </div>
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter Email Address" required>
+      </div>
 
-    <button type="submit">Register</button>
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" required>
+      </div>
 
-    <p class="small-text">
-      Already have an account? <a href="login.html">Login</a>
-    </p>
-   
+      <div class="input-group">
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" required>
+      </div>
 
-  </form>
+      <button type="submit">Register</button>
+
+      <p class="small-text">
+        Already have an account? <a href="login.html">Sign In</a>
+      </p>
+    </form>
+  </div>
 </div>
 
 </body>

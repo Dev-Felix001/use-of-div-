@@ -1,3 +1,4 @@
+/* General reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,34 +6,65 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-  height: 100vh;
-  background: url('bg.jpg') no-repeat center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
+/* Container holding both sides */
+.split-container {
+  display: flex;             /* side by side */
+  height: 100vh;             /* full viewport height */
   width: 100%;
-  max-width: 400px;
-  padding: 20px;
 }
 
-.card {
-  background: rgba(0, 0, 0, 0.6); /* darker for better contrast */
-  backdrop-filter: blur(12px);
-  padding: 30px;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+/* Left side */
+.left-side {
+  flex: 1;                   /* takes 50% */
+  background: url('bg.jpg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* adds depth */
+  text-align: center;
+}
+
+/* Overlay for testimonial text */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);  /* dark transparent overlay */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.testimonial {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.author {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Right side */
+.right-side {
+  flex: 1;                  /* takes 50% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+/* Card form */
+.card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 80%;               /* responsive width */
+  max-width: 400px;
 }
 
 .card h2 {
-  text-align: center;
   margin-bottom: 20px;
-  color: #fff;
+  text-align: center;
 }
 
 .input-group {
@@ -40,46 +72,43 @@ body {
 }
 
 .input-group label {
-  font-size: 14px;
-  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .input-group input {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
-  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 button {
   width: 100%;
-  padding: 12px;
-  background: #ffffffcc;
-  color: #000;
+  padding: 10px;
+  background-color: #007bff;
   border: none;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
-  background: #fff;
+  background-color: #0056b3;
 }
 
-.small-text {
-  margin-top: 15px;
+.small-text, .forgot {
+  margin-top: 10px;
   text-align: center;
-  font-size: 14px;
 }
 
-.small-text a {
-  color: #00f0ff; /* brighter link color */
+.small-text a, .forgot a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.small-text a:hover, .forgot a:hover {
   text-decoration: underline;
 }
