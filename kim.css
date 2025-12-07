@@ -20,9 +20,18 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   color: white;
   text-align: center;
+}
+
+/* Image on left side */
+.left-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 /* Overlay for testimonial text */
@@ -30,6 +39,9 @@
   background-color: rgba(0, 0, 0, 0.6);  /* dark transparent overlay */
   padding: 20px;
   border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
 }
 
 .testimonial {
