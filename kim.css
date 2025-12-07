@@ -8,8 +8,8 @@
 
 /* Container holding both sides */
 .split-container {
-  display: flex;             /* side by side */
-  height: 100vh;             /* full viewport height */
+  display: flex;            
+  height: 100vh;             
   width: 100%;
 }
 
