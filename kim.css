@@ -23,6 +23,18 @@
   align-items: flex-end;
   color: white;
   text-align: center;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Image on left side */
@@ -32,6 +44,18 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Overlay for testimonial text */
@@ -42,17 +66,20 @@
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
 }
 
 .testimonial {
   font-size: 1.2rem;
   line-height: 1.5;
+  animation: fadeIn 0.8s ease-out 0.5s both;
 }
 
 .author {
   display: block;
   margin-top: 10px;
   font-weight: bold;
+  animation: fadeIn 0.8s ease-out 0.6s both;
 }
 
 /* Right side */
@@ -62,58 +89,124 @@
   justify-content: center;
   align-items: center;
   background-color: #f8f8f8;
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Card form */
 .card {
   background-color: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  width: 80%;               /* responsive width */
-  max-width: 400px;
+  padding: 60px 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  width: 85%;               /* responsive width */
+  max-width: 500px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card h2 {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   text-align: center;
+  font-size: 2rem;
+  color: #333;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.input-group:nth-child(2) { animation-delay: 0.3s; }
+.input-group:nth-child(3) { animation-delay: 0.4s; }
+.input-group:nth-child(4) { animation-delay: 0.5s; }
+.input-group:nth-child(5) { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
+  font-size: 1.05rem;
+  color: #333;
 }
 
 .input-group input {
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 15px 12px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:hover {
+  border-color: #b3d9ff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
 button {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   background-color: #007bff;
   border: none;
   color: white;
-  font-size: 1rem;
-  border-radius: 5px;
+  font-size: 1.1rem;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.6s ease-out 0.7s both;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 .small-text, .forgot {
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
+  font-size: 1rem;
 }
 
 .small-text a, .forgot a {
